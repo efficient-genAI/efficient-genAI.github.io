@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<div style="text-align: left; max-width: 800px; margin: auto;">
+<title>Tutorial T05: Efficient Text-to-Image and Text-to-3D modeling| [“ECCV 2024 Tutorial”, “September, 29, 2024”, “Milan, Italy”]</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Text-to-Image and Text-to-3D modeling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[“ECCV 2024 Tutorial”, “September, 29, 2024”, “Milan, Italy”]" />
+<meta property="og:description" content="[“ECCV 2024 Tutorial”, “September, 29, 2024”, “Milan, Italy”]" />
+<link rel="canonical" href="https://efficient-genAI.github.io/" />
+<meta property="og:url" content="https://efficient-genAI.github.io/" />
+<meta property="og:site_name" content="Efficient Text-to-Image and Text-to-3D modeling" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Text-to-Image and Text-to-3D modeling" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"[“ECCV 2024 Tutorial”, “September, 29, 2024”, “Milan, Italy”]","headline":"Efficient Text-to-Image and Text-to-3D modeling","name":"Efficient Text-to-Image and Text-to-3D modeling","url":"https://efficient-genAI.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:title" content='Efficient Text-to-Image and Text-to-3D modeling-ECCV2024'/>
+    <meta property="og:image" content="efficient-genAI.github.io/milan.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:type" content='website'/>
+    <meta name="description" content="ECCV 2024 TutorialSeptember, 2024 Milan, Italy"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#39275B">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/style.css?v=6e64313460609e93346c4862a60afa3aebec1d2f">
+    
+  </head>
+  <body>
+  <style> 
+    .logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      background-color: #000000; 
+    } 
+    
+    .page-header1 {
+  background-image: url('milan.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  background-position: center;
+  padding-bottom: 1rem;
+  background-color: #ffffff;
+    }
+  .page-header2 {
+  background-color: #ffffff;
+  background-image: linear-gradient(120deg, #ffffff, #ffffff);
+  }
+    .btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.897);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: rgba(0, 0, 0, 0.918);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    }
+  </style>
+    <section class="page-header page-header1">
+    <div style="text-align: left; max-width: 800px; margin: auto;">
+      <!-- <img alt="logo" src="pics/placehold-logo.svg" class = "logo" > -->
+      <h1 class="project-name" style="color:#ffffff; ">Efficient Text-to-Image and Text-to-3D modeling</h1>
+     <h2 class="project-tagline" style="font-size: 32px; color:#ffffff ;  opacity: 100%; "><span>ECCV 2024 Tutorial</span><br><span>September, 29, 2024</span><br><span>Milan, Italy</span><br></h2>
+   
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+       
+       
+    <a href="./index.html" class="btn" style="color:#ffffff ; font-size: large; text-shadow: -0.1px -0.1px 0 #000000, 0.1px -0.1px 0 #000000, -0.1px 0.1px 0 #000000, 0.1px 0.1px 0 #000000;">Overview</a>
+  
+       
+    <a href="./index.html#speakers" class="btn" style="color:#ffffff ; font-size: large; text-shadow: -0.1px -0.1px 0 #000000, 0.1px -0.1px 0 #000000, -0.1px 0.1px 0 #000000, 0.1px 0.1px 0 #000000;">Speakers</a>
+  
+       
+    <a href="./index.html#schedule" class="btn" style="color:#ffffff ; font-size: large; text-shadow: -0.1px -0.1px 0 #000000, 0.1px -0.1px 0 #000000, -0.1px 0.1px 0 #000000, 0.1px 0.1px 0 #000000;">Schedule</a>
+
+    </section>
+    
+   
+    <section class="main-content">
+      <style> 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+} </style>
+
+<h1 id="overview">Overview</h1>
+<div style="text-align: left; max-width: 800px; margin: auto;">
+We are witnessing groundbreaking results in image-to-text and image-to-3D models. However, the generation process with these models is iterative and computationally expensive, requiring multiple sampling steps through large models. There is a growing need to make these algorithms faster for serving millions of users without the use of too many GPUs/TPUs. In this course, we will focus on techniques such as progressive parallel decoding, distillation methods, and Markov Random Fields to achieve speedup on generative models. The course will also focus on highlighting the limitations of popular image evaluation techniques such as FID and providing efficient alternative approaches such as CMMD and DreamSim.</div>
+
+<h1 id="peakers">Speakers</h1>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+
+  <div style="width:45%; margin: 1%;">
+    <a href="https://ssundaram21.github.io/">
+      <img alt="Shobhita Sundaram" src="ssundaram_headshot.png" height="200" width="200" style="border-radius: 50%; object-fit: cover; " />
+    </a><br />
+  <a href="https://ssundaram21.github.io/">Shobhita Sundaram</a><br />
+    Massachusetts Institute of Technology (MIT)
+  </div>
+  
+  <div style="width:45%; margin: 1%;">
+    <a href="https://research.google/people/106837/?&type=google">
+      <img alt="Sadeep Jayasumana" src="sadeep_headshot.jpg" height="200" width="200" style="border-radius: 50%; object-fit: cover; " />
+    </a><br />
+  <a href="https://research.google/people/106837/?&type=google"> Sadeep Jayasumana</a><br />
+    Google Research
+  </div>
+  
+  <div style="width:45%; margin: 1%;">
+    <a href="https://varunjampani.github.io/">
+      <img alt="Varun Jampani" src="varun_headshot.jpeg" height="200" width="200" style="border-radius: 50%; object-fit: cover; " />
+    </a><br />
+  <a href="https://varunjampani.github.io/">Varun Jampani</a><br />
+    Stability AI
+  </div>
+
+    <div style="width:45%; margin: 1%;">
+    <a href="https://dilipkay.wordpress.com/">
+      <img alt="Dilip Krishnan" src="dilip_headshot.jpeg" height="200" width="200" style="border-radius: 50%; object-fit: cover; " />
+    </a><br />
+  <a href="https://dilipkay.wordpress.com/">Dilip Krishnan</a><br />
+    Google DeepMind
+  </div>
+
+      <div style="width:45%; margin: 1%;">
+    <a href="https://users.cs.utah.edu/~srikumar/">
+      <img alt="Srikumar Ramalingam" src="srikumar_headshot.png" height="200" width="200" style="border-radius: 50%; object-fit: cover; " />
+    </a><br />
+  <a href="https://users.cs.utah.edu/~srikumar/">Srikumar Ramalingam</a><br />
+    Google Research
+  </div>
+
+
+
+
+  <div style="width:45%; margin: 1%;">
+  <a href="">
+   
+  </a><br />
+  <a href=""></a><br />
+  
+</div>
+</div>
+
+<h1 id="schedule">Schedule</h1>
+<div style="text-align: left; max-width: 800px; margin: auto;">
+<style>
+            /* Table styling */
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                border: 1px solid #ddd; /* Add border to table */
+            }
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border: 1px solid #ddd; /* Add border to cells */
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+</style>
+
+
+<ul>
+  <li><strong>Date:</strong> September 29, 2024</li>
+  <li><strong>Time:</strong> 9:10 AM - 1:00 PM</li>
+  <li><strong>Location:</strong> Amber 3</li>
+</ul>
+  
+  <table>
+                <tr>
+                    <th> Time </th>
+                    <th> Instructor </th>
+                    <th> Title </th>
+                </tr>
+                <tr>
+                    <td> 9:10 AM </td>
+                    <td> Srikumar Ramalingam </td>
+                    <td> <a href="ECCV_2024_Tutorial_Cornerstones.pdf"> Cornerstones of the Text-To-Pixels Journey </a> </td>
+                </tr>
+                <tr>
+                    <td> 9:50 AM </td>
+                    <td> Shobhita Sundaram </td>
+                    <td> <a href="ECCV_2024_Tutorial_ImageEvaluation.pdf">Image Evaluation Methods </a></td>
+                </tr>
+                <tr>
+                    <td> 10:30 AM </td>
+                    <td> Break </td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <td> 11:00 AM </td>
+                    <td> Varun Jampani </td>
+                    <td> <a href="Thinking_slow_and_fast_Recent_trends_3D_generations_ECCV_tutorial.pdf">Thinking Slow and Fast: Recent Trends in 3D Generative Models</a>  </td>
+                </tr>
+                <tr>
+                    <td> 11:30 AM </td>
+                    <td> Dilip Krishnan </td>
+                    <td> <a href="ECCV_2024_Tutorial_Muse.pdf">Parallel Decoding and Image Generation</a> </td>
+                </tr>
+                <tr>
+                    <td> 12:00 AM </td>
+                    <td> Sadeep Jayasumana </td>
+                    <td> <a href="ECCV_2024_Tutorial_MarkovGen.pdf">Structured Prediction Algorithms for Fast Image Generation</a> </td>
+                </tr>
+                </table>
+
+        </section>
+        <section id="tutorial-content">
+            <h1> Tutorial Contents </h1>
+            <div style="text-align: left; max-width: 800px; margin: auto;">
+            <b> Cornerstones of the Text-to-Pixels Journey </b>  
+            <p> This will introduce basics and fundamentals of text-to-image algorithms such as codebook learning, diffusion and token-based image generation models such as Stable diffusion, Imagen, DALL-E, and Parti.  </p>
+            <b> Image evaluation methods </b>
+            <p> We will also discuss evaluation metrics for text-to-image models, such as FID, CMMD, and DreamSim.</p>
+            <b> Parallel decoding and image generation </b>  
+            <p> We will be focusing on existing methods for token-based image generation that exploits non-autoregressive techniques for achieving speedup. In particular, we will take a closer look at techniques such as MaskGIT and Muse that exploit progressive parallel decoding methods to produce high quality images more efficiently than autoregressive methods such as Parti. </p>
+            <b> Fast Image Generation Techniques </b>  
+            <p> We will cover current metrics for image generation (such as FID) and popular image similarity and quality assessment metrics, such as LPIPS \cite{zhang2018perceptual}. We will also discuss recent, efficient image similarity metrics, such as DreamSim, that are trained using synthetic data and parameter efficient fine-tuning of large ViT backbones. </p>
+            <b> Thinking Slow and Fast: Recent Trends in 3D Generative Models </b>  
+            <p> Extending text-to-image, there are several newer methods that focus on other modalities such as text-to-3D. We will be discussing the basics of text-to-3D algorithms such as repurposing text-to-image models for multi-view generation, as well as efficient ways to directly predict 3D models from a single image within a few seconds. </p>
+        </section>     
+
+    <section id="references">
+        <h1> References </h1>
+        <div style="text-align: left; max-width: 800px; margin: auto;">
+        <p> 1.  Chang,  H.,  Zhang,  H.,  Barber,  J.,  Maschinot,  A.,  Lezama,  J.,  Jiang,  L.,  Yang,M.H., Murphy, K., Freeman, W.T., Rubinstein, M., Li, Y., Krishnan, D.: Muse:Text-to-image generation via masked generative transformers. ICML (2023) </p> 
+        <p> 2.  Chang, H., Zhang, H., Jiang, L., Liu, C., Freeman, W.T.: Maskgit: Masked gener-ative image transformer. In: CVPR (2022) </p>
+        <p> 3.  Fu*,  S.,  Tamir*,  N.,  Sundaram*,  S.,  Chai,  L.,  Zhang,  R.,  Dekel,  T.,  Isola,  P.:Dreamsim:  Learning  new  dimensions  of  human  visual  similarity  using  syntheticdata. In: NeurIPS (2023) </p>
+        <p> 4.  Heusel,  M.,  Ramsauer,  H.,  Unterthiner,  T.,  Nessler,  B.,  Hochreiter,  S.:  GANsTrained  by  a  Two  Time-Scale  Update  Rule  Converge  to  a  Local  Nash  Equilib-rium (2018) </p>
+        <p> 5.  Jayasumana, S., Glasner, D., Ramalingam, S., Veit, A., Chakrabarti, A., Kumar,S.: Markovgen: Structured prediction for efficient text-to-image generation (2023) </p>
+        <p> 6.  Jayasumana, S., Ramalingam, S., Veit, A., Glasner, D., Chakrabarti, A., Kumar,S.: Rethinking fid: Towards a better evaluation metric for image generation (2024) </p>
+        <p> 7.  Midjourney: (2022), https:://www.midjourney.com8.  Poole, B., Jain, A., Barron, J.T., Mildenhall, B.: Dreamfusion: Text-to-3d using2d diffusion (2022) </p>
+        <p> 9.  Raj,  A.,  Kaza,  S.,  Poole,  B.,  Niemeyer,  M.,  Mildenhall,  B.,  Ruiz,  N.,  Zada,  S.,Aberman,  K.,  Rubenstein,  M.,  Barron,  J.,  Li,  Y.,  Jampani,  V.:  Dreambooth3d:Subject-driven text-to-3d generation. ICCV (2023) </p>
+        <p> 10.  Ramesh,  A.,  Dhariwal,  P.,  Nichol,  A.,  Chu,  C.,  Chen,  M.:  Hierarchical  text-conditional image generation with clip latents. preprint (2022), [arxiv:2204.06125] </p>
+        <p> 11.  Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.: High-resolutionimage synthesis with latent diffusion models. In: CVPR (2022) </p>
+        <p> 12.  Ruiz, N., Li, Y., Jampani, V., Pritch, Y., Rubinstein, M., Aberman, K.: Dream-booth:  Fine  tuning  text-to-image  diffusion  models  for  subject-driven  generation(2022) </p>
+        <p> 13.  Saharia, C., Chan, W., Saxena, S., Li, L., Whang, J., Denton, E., Ghasemipour,S.K.S., Ayan, B.K., Mahdavi, S.S., Lopes, R.G., Salimans, T., Ho, J., Fleet, D.J.,Norouzi, M.: Photorealistic text-to-image diffusion models with deep language un-derstanding. preprint (2022), [arXiv:2205.11487] </p>
+        <p> 14.  Salimans, T., Ho, J.: Progressive distillation for fast sampling of diffusion models.In: ICLR (2022) </p>
+        <p> 15.  Yu, J., Xu, Y., Koh, J.Y., Luong, T., Baid, G., Wang, Z., Vasudevan, V., Ku, A.,Yang,  Y.,  Ayan,  B.K.,  Hutchinson,  B.,  Han,  W.,  Parekh,  Z.,  Li,  X.,  Zhang,  H.,Baldridge, J., Wu, Y.: Scaling autoregressive models for content-rich text-to-imagegeneration. In: ICML (2022) </p>
+        <p> 16.  Zhang,  R.,  Isola,  P.,  Efros,  A.A.,  Shechtman,  E.,  Wang,  O.:  The  unreasonable effectiveness of deep features as a perceptual metric. In: CVPR (2018) </p>
+    </section>
+
+        <section id="resources">
+            <h2>Code Repository References</h2>
+            <ul>
+                <li><a href="https://github.com/google-research/google-research/tree/master/cmmd">CMMD</a></li>
+                <li><a href="https://github.com/ssundaram21/dreamsim">DreamSim</a></li>
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shobhita Sundaram, Sadeep Jayasumana, Varun Jampani, Dilip Krishnan, Srikumar Ramalingam </p>
+    </footer>
+
+    <script src="script.js"></script>  </body>
+</html>
