@@ -7,7 +7,7 @@
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <div style="text-align: left; max-width: 800px; margin: auto;">
-<title>Tutorial T05: Efficient Text-to-Image and Text-to-Video modeling| [“CVPR 2025 Tutorial”, “June, 12, 2025”, “Nashville, USA”]</title>
+<title>Efficient Text-to-Image/Video modeling| [“CVPR 2025 Tutorial”, “June, 12, 2025”, “Nashville, USA”]</title>
 <meta name="generator" content="Jekyll v3.9.5" />
 <meta property="og:title" content="Efficient Text-to-Image and Text-to-3D modeling" />
 <meta property="og:locale" content="en_US" />
@@ -15,15 +15,15 @@
 <meta property="og:description" content="[“CVPR 2025 Tutorial”, “June, 12, 2025”, “Nashville, USA”]" />
 <link rel="canonical" href="https://efficient-genAI.github.io/" />
 <meta property="og:url" content="https://efficient-genAI.github.io/" />
-<meta property="og:site_name" content="Efficient Text-to-Image and Text-to-3D modeling" />
+<meta property="og:site_name" content="Efficient Text-to-Image/Video modeling" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Efficient Text-to-Image and Text-to-3D modeling" />
+<meta property="twitter:title" content="Efficient Text-to-Image/Video modeling" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"[“CVPR 2025 Tutorial”, “June, 12, 2025”, “NashVille, USA”]","headline":"Efficient Text-to-Image and Text-to-3D modeling","name":"Efficient Text-to-Image and Text-to-3D modeling","url":"https://efficient-genAI.github.io/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"[“CVPR 2025 Tutorial”, “June, 12, 2025”, “NashVille, USA”]","headline":"Efficient Text-to-Image/Video modeling","name":"Efficient Text-to-Image/Video modeling","url":"https://efficient-genAI.github.io/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <meta property="og:title" content='Efficient Text-to-Image and Text-to-3D modeling-CVPR2024'/>
+    <meta property="og:title" content='Efficient Text-to-Image/Video modeling-CVPR2025'/>
     <meta property="og:image" content="efficient-genAI.github.io/cvpr2025_nashville_tn.jpeg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="200">
@@ -73,7 +73,7 @@
     <section class="page-header page-header1">
     <div style="text-align: left; max-width: 800px; margin: auto;">
       <!-- <img alt="logo" src="pics/placehold-logo.svg" class = "logo" > -->
-      <h1 class="project-name" style="color:#ffffff; ">Efficient Text-to-Image and Text-to-Video modeling</h1>
+      <h1 class="project-name" style="color:#ffffff; ">Efficient Text-to-Image/Video modeling</h1>
      <h2 class="project-tagline" style="font-size: 32px; color:#ffffff ;  opacity: 100%; "><span>CVPR 2025 Tutorial</span><br><span>June, 12, 2024</span><br><span>Nashville, USA</span><br></h2>
    
       <br>
@@ -196,7 +196,7 @@ We are witnessing groundbreaking results in image-to-text and image-to-3D models
                 <tr>
                     <td> 9:45 AM </td>
                     <td> Srikumar Ramalingam </td>
-                    <td> <a href="CVPR_2024_Tutorial_Cornerstones.pdf"> Cornerstones of the Text-To-Pixels Journey </a> </td>
+                    <td> <a href="ECCV_2024_Tutorial_Cornerstones.pdf"> Efficient methods for text-to-image Generation </a> </td>
                 </tr>
                 <tr>
                     <td> 10:30 AM </td>
@@ -206,12 +206,12 @@ We are witnessing groundbreaking results in image-to-text and image-to-3D models
                     <tr>
                     <td> 10:45 AM </td>
                     <td> Sadeep Jayasumana </td>
-                    <td> <a href="CVPR_2024_Tutorial_ImageEvaluation.pdf"> Structured Prediction for Efficient Image Generation </a></td>
+                    <td> <a href="CVPR_2024_Tutorial_ImageEvaluation.pdf"> Continuous MRF and FoE model for t2i Generation </a></td>
                 </tr>
                 <tr>
                     <td> 11:30 AM </td>
                     <td> Ameesh Makadia </td>
-                    <td> <a href="Thinking_slow_and_fast_Recent_trends_3D_generations_CVPR_tutorial.pdf">Recent Trends in 3D Generative Models</a>  </td>
+                    <td> <a href="Thinking_slow_and_fast_Recent_trends_3D_generations_CVPR_tutorial.pdf">Efficient Text-to-3D and Text-to-Video generation</a>  </td>
                 </tr>
                 </table>
 
@@ -219,16 +219,14 @@ We are witnessing groundbreaking results in image-to-text and image-to-3D models
         <section id="tutorial-content">
             <h1> Tutorial Contents </h1>
             <div style="text-align: left; max-width: 800px; margin: auto;">
-            <b> Cornerstones of the Text-to-Pixels Journey </b>  
-            <p> This will introduce basics and fundamentals of text-to-image algorithms such as codebook learning, diffusion and token-based image generation models such as Stable diffusion, Imagen, DALL-E, and Parti.  </p>
-            <b> Image evaluation methods </b>
-            <p> We will also discuss evaluation metrics for text-to-image models, such as FID, CMMD, and DreamSim.</p>
-            <b> Parallel decoding and image generation </b>  
-            <p> We will be focusing on existing methods for token-based image generation that exploits non-autoregressive techniques for achieving speedup. In particular, we will take a closer look at techniques such as MaskGIT and Muse that exploit progressive parallel decoding methods to produce high quality images more efficiently than autoregressive methods such as Parti. </p>
-            <b> Fast Image Generation Techniques </b>  
-            <p> We will cover current metrics for image generation (such as FID) and popular image similarity and quality assessment metrics, such as LPIPS \cite{zhang2018perceptual}. We will also discuss recent, efficient image similarity metrics, such as DreamSim, that are trained using synthetic data and parameter efficient fine-tuning of large ViT backbones. </p>
-            <b> Thinking Slow and Fast: Recent Trends in 3D Generative Models </b>  
-            <p> Extending text-to-image, there are several newer methods that focus on other modalities such as text-to-3D. We will be discussing the basics of text-to-3D algorithms such as repurposing text-to-image models for multi-view generation, as well as efficient ways to directly predict 3D models from a single image within a few seconds. </p>
+            <b> Mathematics of Diffusion Models </b>  
+            <p> We will cover the mathematics/fundamentals of diffusion models [6], which is the building block for many generative methods. More emphasis will be given on the underlying theory/fundamentals, which has received minimal attention in the community.  </p>
+            <b> Efficient methods for t2i Generation </b>
+            <p> We will cover temporal-distillation and MRF-based algorithms [3] for improving the efficiency of token-based methods such as Muse [1]..</p>
+            <b> Continuous MRF and FoE model for t2i Generation </b>  
+            <p> We will cover current metrics for image generation (such as FID) and improved metrics such as CMMD [4]. Newer methods to speedup diffusion models using MRF And Field of Experts models will be discussed.. </p>
+            <b> Efficient Text-to-3D and Text-to-Video generation </b>  
+            <p> We will be giving an overview of generative algorithms in 3D and video space, and particularly covering efficient algorithms driven by geometric priors for video generation [7].. </p>
         </section>     
 
     <section id="references">
